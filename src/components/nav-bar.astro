@@ -1,19 +1,40 @@
-<nav>
+---
+import HamburguerSVG from "../assets/svgs/hamburger.svg"
+---
+<nav id="navigation-bar">
     <div class="nav-main-container">
         <div class="logo-container">
             <p class="marsh-logo">Marsh Market</p>
         </div>
-        <div class="navigation-container">
+
+        <button class="hamburguer-button">
+            <HamburguerSVG></HamburguerSVG>
+        </button>
+
+        <div class="navigation-container hidden">
             <a href="">Work</a>
             <a href="">Team</a>
             <a href="">Contact</a>
         </div>
+        
+        <div class="fade-screen hidden"></div>
     </div>
 </nav>
 
 <style>
+
 nav{
+    width: 100%;
     background-color: azure;
+    .fade-screen{
+        top: 70px;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 6;
+        position: absolute;
+        background-color: rgba(26, 26, 26, 0.404);
+    }
     .nav-main-container{
         padding: 20px 30px;
         display: flex;
@@ -23,12 +44,68 @@ nav{
                 margin:0;
                 font-size: var(--desktop-logo-size);
                 font-family: var(--desktop-logo-font);
+                font-weight:600;
             }
+        }
+
+        .navigation-container{
+            padding:30px;
+            height: 80vh;
+            width: 55vw;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            background-color: red;
+            position: absolute;
+            top:70px;
+            right: 0;
+
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+
+        }
+        .navigation-container.hidden{
+            opacity: 0;
+            transform: translateY(-20px);
+            pointer-events: none;
+        }
+        .fade-screen.hidden{
+            opacity: 0;
+            pointer-events: none;
         }
     }
 }
 
-@media (max-width:768px){
-
+@media (min-width:768px){
+    nav{
+        .hamburguer-button{
+            display: none;
+        }
+        .nav-main-container{
+            .navigation-container{
+                height: fit-content;
+                width: fit-content;
+                padding: 0;
+                display: flex;
+                position: static;
+                flex-direction: row;
+            }
+        }
+    }
 }
 </style>
+
+<script>
+    const navigationBar = document.querySelector("#navigation-bar");
+    const hamburgerButton = navigationBar?.querySelector(".hamburguer-button");
+    const navContainer = navigationBar?.querySelector(".navigation-container");
+    const fadeScreen = navigationBar?.querySelector(".fade-screen");
+    
+    hamburgerButton?.addEventListener("click", ()=>{
+        navContainer?.classList.toggle("hidden");
+        fadeScreen?.classList.toggle("hidden");
+    })
+    
+</script>
