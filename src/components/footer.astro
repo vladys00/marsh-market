@@ -1,20 +1,66 @@
+---
+import MarshFooterSVG from "../assets/svgs/marsh-footer-mobile.svg"
+import ArrowRightSVG from "../assets/svgs/arrow-right.svg"
+---
 <footer>
-    <div class="footer-links-container">
-        <p><a href="">© 2025 MarshMarket, Inc. All Rights Reserved</a></p>
-        <p><a href="">Refund policy</a></p>
-        <p><a href="">Privacy policy</a></p>
-        <p><a href="">Terms of service</a></p>
-        <p><a href="">Do Not Sell My Personal Information</a></p>
+    <h6>2026 MarshMarket</h6>
+    <div class="main-footer-container">
+        <p class="footer-text">Talk to us or ask us anything</p>
+        <div class="top-links-container">
+            <a href="/contact"><ArrowRightSVG/> Contact Us</a>
+            <a href=""><ArrowRightSVG/> Cookie policy</a>
+            <a href=""><ArrowRightSVG/> Terms of service</a>
+        </div>
+        <div class="bottom-links-container">
+            <a href=""><ArrowRightSVG/> Instagram</a>
+            <a href=""><ArrowRightSVG/> LinkedIn</a>
+        </div>
+    </div>
+    <div class="svg-container">
+        <MarshFooterSVG/>
     </div>
 </footer>
 
 <style>
 footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 20px 30px;
     background-color: rgba(255, 148, 109, 0.192);
-    .footer-links-container{
+    background-image: url("../assets/images/background-mobile-footer.png");
+    h6{
+        font-weight: 500;
+        font-size: 16px;
+        margin:0;
+    }
+    .main-footer-container{
+        max-width: 235px;
+        .footer-text{
+            font-weight: 800;
+            font-size: 16px;
+            margin:30px 0 16px 0;
+        }
+    }
+    .top-links-container,
+    .bottom-links-container{
         display: flex;
+        flex-direction: column;
         justify-content: space-around;
+        gap:16px;
+        a{
+            all:unset;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+    .bottom-links-container{
+        margin-top:10px;
+    }
+    .svg-container{
+        margin-top:60px;
     }
 }
 </style>
