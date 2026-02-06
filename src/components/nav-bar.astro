@@ -4,7 +4,7 @@ import HamburguerSVG from "../assets/svgs/hamburger.svg"
 <nav id="navigation-bar">
     <div class="nav-main-container">
         <div class="logo-container">
-            <p class="marsh-logo">Marsh Market</p>
+            <p class="marsh-logo"><a href="/">Marsh Market</a></p>
         </div>
 
         <button class="hamburguer-button">
@@ -35,6 +35,9 @@ nav{
                 font-size: var(--desktop-logo-size);
                 font-family: var(--desktop-logo-font);
                 font-weight:600;
+                a{
+                    all:unset;
+                }
             }
         }
         .hamburguer-button{
@@ -64,6 +67,7 @@ nav{
         }
         .navigation-container.show{
             opacity: 1;
+            pointer-events: all;
         }
         .fade-screen{
             top: 70px;
@@ -75,10 +79,12 @@ nav{
             background-color: rgba(26, 26, 26, 0.404);
             display: flex;
             opacity: 0;
+            display: none;
             transition: opacity 0.3s;
         }
         .fade-screen.show{
             opacity: 1;
+            display: block;
         }
     }
 }
@@ -86,10 +92,12 @@ nav{
 @media (min-width:768px){
     nav{
         .nav-main-container{
+            padding: 30px 45px;
             .hamburguer-button{
                 display: none;
             }
             .navigation-container{
+                pointer-events: all;
                 height: fit-content;
                 width: fit-content;
                 padding: 0;

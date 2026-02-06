@@ -1,28 +1,44 @@
-<section class="sec-1-descriptor center-content">
+---
+import { Image } from "astro:assets";
+import egretImage from "../assets/images/sec2.png";
+---
+
+<section class="sec-2-descriptor center-content">
     <div class="sec-main-desc-cont page-width">
         <div class="desc-cont">
             <h2>
-                We shape <br> iconic identities that perform <br class="desktop-break">—  
-                in culture and numbers.
+                We connect <br>
+                brand, Shopify, and creativity to<br class="desktop-break"> build more authentic commerce.    
             </h2>
             <p class="main-text">
-                Hola! Welcome to Marsh Market — a complete Shopify world for brands that never settle for less. We work inside the ecosystem — strategy, build, creativity, and performance — so nothing gets lost in translation.
+                Building a commerce brand is complex — especially when growth accelerates faster than your systems can keep up.You look for help, but quickly realize the problem:
+                Design studios speak art, but not business.
+                Shopify agencies think in features, but not feelings.
+                Creative consultancies breathe culture, but not numbers.
+                Oops. You can’t have it all, can you?
+            </p>
+            <p>
+                <span class="bold-text">Not until Marsh Market. </span> 
+                A studio built on the belief that growth shouldn’t require compromise. We bring brand expertise, strategic clarity, technical reliability, and cultural fluency into one integrated practice — working with brand-first businesses that have purpose and soul.
+                Hop on our boat — we’ll show you where meaning meets momentum.
             </p>
             
-            <a class="contact-button" href="/pages">
-                Let`s talk
-            </a>
             
         </div>
         <div class="img-container">
-            <img src="https://www.rainycityagency.com/cdn/shop/files/bird.jpg?v=1734546098" alt="">
+            <Image
+            src={egretImage}
+            alt="Description of image"
+            width={600}
+            height={400}
+            />
         </div>
 
     </div>
 </section>
 
 <style>
-.sec-1-descriptor{
+.sec-2-descriptor{
     width: 100vw;
     .sec-main-desc-cont{
         .desc-cont{
@@ -54,7 +70,7 @@
 }
 
 @media (min-width:768px){
-    .sec-1-descriptor{
+    .sec-2-descriptor{
         height: 90vh;
         position: relative;
         .sec-main-desc-cont{
@@ -62,6 +78,7 @@
             height: 100%;
             position: relative;
             display:flex;
+            flex-direction: row-reverse;
             gap:50px;
             justify-content: space-between;
 
