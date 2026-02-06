@@ -31,6 +31,7 @@ nav{
         justify-content: space-between;
         align-items: center;
         .logo-container{
+            transition: scale 0.3s;
             .marsh-logo{
                 margin:0;
                 font-size: var(--desktop-logo-size);
@@ -41,8 +42,13 @@ nav{
                 }
             }
         }
+        .logo-container:hover{
+            cursor:pointer;            
+            scale: 1.07;
+        }
         .hamburguer-button{
             all:unset;
+            
         }
 
         .navigation-container{
@@ -63,6 +69,14 @@ nav{
             transition: opacity 0.3s;
             a{
                 all:unset;
+                font-weight: 500;
+                color: #999999;
+                transition: color 0.3s, scale 0.3s;
+            }
+            a:hover{
+                cursor:pointer;
+                scale: 1.07;
+                color: black;
             }
 
         }
