@@ -1,6 +1,122 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import {Image} from "astro:assets";
+import EmImg from "../assets/images/em-img.png"
+import VKImg from "../assets/images/vk-img.png"
+
 ---
 <Layout>
-    <h1>this is the team page</h1>
+    <section class="team-section center-content">
+        <div class="team-container page-width">
+            <div class="title-container">
+                <h1>Meet the Team</h1>
+            </div>
+            <div class="intro-container">
+                <div class="intro-card intro-em">
+                    <div class="image-container">
+                        <Image/
+                            src={EmImg}
+                            alt="Portrait cofounder Emily"
+                        >
+                    </div>
+                    <div class="description-container">
+                        <h2>Emily Yang</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu 
+                        </p>
+                    </div>
+                </div>
+                <div class="intro-card intro-vk">
+                    <div class="image-container">
+                        <Image/
+                            src={VKImg}
+                            alt="Portrait cofounder Vladys"
+                        >
+                    </div>
+                    <div class="description-container">
+                        <h2>Vladys Kolodnytskyy</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </Layout>
+
+<style>
+.team-section{
+    .team-container{
+        padding: 30px 20px;
+        .title-container{
+            h1{
+                font-size: 35px;
+                text-transform: uppercase;
+                font-weight: 500;
+            }
+        }
+        .intro-container{
+            margin-top:60px;
+            .intro-card{
+                display: flex;
+                .image-container{
+                    width: 114px;
+                    height: 183px;
+                    img{
+                        width: 114px;
+                        height: 100%;
+                        object-fit: fill;
+                    }
+                }
+                .description-container{
+                    padding:30px 0 20px 20px;
+                    h2{
+                        font-size: 25px;
+                        margin-bottom: 30px;
+                    }
+                }
+
+            }
+            .intro-vk{
+                border-top:1px solid black;
+                padding-top: 20px;
+            }
+        }
+
+    }
+}
+
+@media (min-width:768px){
+    .team-section{
+        .team-container{
+            display: flex;
+            padding: 50px 45px;
+            
+            .title-container{
+                width: 40%;
+                h1{
+                    font-size: 47px;
+                }
+            }
+            .intro-container{
+                width: 60%;
+                border-left: 1px solid black;
+                margin:0;
+                .intro-card{
+                    padding: 40px;
+                    .image-container{
+                        width: 173px;
+                        height: 256px;
+                        img{
+                            width: 173px;
+                            height: 256px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+</style>
