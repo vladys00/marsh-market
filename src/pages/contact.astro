@@ -41,7 +41,7 @@ import EgretImage from "../assets/images/sec2.png"
             img{
                 width: 100%;
                 height: 100%;
-                object-fit: fill;
+                object-fit: cover;
             }
         }
         .text-container{
@@ -63,6 +63,9 @@ import EgretImage from "../assets/images/sec2.png"
                     all:unset;
                     display: block;
                 }
+                a:hover{
+                    cursor: pointer;
+                }
             }
             .links-container a:first-of-type{
                 margin-top:20px;
@@ -70,25 +73,45 @@ import EgretImage from "../assets/images/sec2.png"
         }
     }
 }
+
 @media (min-width:768px){
     .contact-section{
         padding: 50px 45px;
         .contact-container{
             flex-direction: row;
             .image-container{
+                width:45%;
+                height: 80vh;
+                max-height: 900px;
+            }
+            .text-container{
+                padding: 0 0 0 30px;
+                width: 55%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .title-container{
+                    h1{
+                        text-align: end;
+                        font-size: 47px;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media (min-width:950px){
+    .contact-section{
+        .contact-container{
+            .image-container{
                 width:35%;
                 height: 80vh;
             }
             .text-container{
                 width: 65%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                h1{
-                    text-align: end;
-                }
             }
-
         }
     }
 }

@@ -4,8 +4,8 @@
  import {Image} from "astro:assets"
 ---
 
-<section class="sec-3-home center-content">
-    <div class="inner-cont page-width">
+<section class="sec-3-home ">
+    <div class="inner-cont ">
         <div class="title-cont">
             <div class="upper-container">
                 <h2>
@@ -23,8 +23,6 @@
                     <Image
                         src={texture1}
                         alt="Description of image"
-                        width={45}
-                        height={45}
                     />
                 </div>
                 <h3>Brand-led Shopify Launch / Makeover</h3>
@@ -35,8 +33,6 @@
                     <Image
                         src={texture2}
                         alt="Description of image"
-                        width={45}
-                        height={45}
                     />
                 </div>
                 <h3>Brand-to-cart creative</h3>
@@ -73,8 +69,12 @@
         padding-top:40px;
         .offering{
             .offering-texture{
+                width: 35px;
+                height: 35px;
                 img{
                     border-radius: 50%;
+                    width: 100%;
+                    height: 100%;
                 }
             }
             h3{
@@ -120,9 +120,8 @@
                 .offering{
                     padding: 20px;
                     .offering-texture{
-                        img{
-                            border-radius: 50%;
-                        }
+                        width: 45px;
+                        height: 45px;  
                     }
                     h3{
                         margin:20px 0 15px 0 ;
