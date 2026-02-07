@@ -1,6 +1,95 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import {Image} from "astro:assets";
+import EgretImage from "../assets/images/sec2.png"
 ---
 <Layout>
-    <h1>this is the contact page</h1>
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="image-container">
+                <Image
+                    src={EgretImage}
+                    alt="egret flying"
+                />
+            </div>  
+            <div class="text-container">
+                <div class="title-container">
+                    <h1>Contact</h1>
+                </div>
+                <div class="links-container">
+                    <p>+34 655 066 245</p>
+                    <p>vldk0022@gmail.com</p>
+
+                    <a href="https://www.instagram.com/marshmarket_/">Instagram</a>
+                    <a href="https://www.instagram.com/marshmarket_/">Linkedin</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
 </Layout>
+
+<style>
+.contact-section{
+    .contact-container{
+        display: flex;
+        flex-direction: column-reverse;
+        .image-container{
+            width: 100vw;
+            height: 550px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+            }
+        }
+        .text-container{
+            padding: 30px 20px;
+            .title-container{
+                h1{
+                    font-weight: 500;
+                    font-size: 35px;
+                    text-transform: uppercase;
+                    margin-bottom: 50px;
+                }
+            }
+            .links-container{
+                padding: 20px 0;
+                text-align: right;
+                text-transform: uppercase;
+                border-top: 1px solid black;
+                a{
+                    all:unset;
+                    display: block;
+                }
+            }
+            .links-container a:first-of-type{
+                margin-top:20px;
+            }
+        }
+    }
+}
+@media (min-width:768px){
+    .contact-section{
+        padding: 50px 45px;
+        .contact-container{
+            flex-direction: row;
+            .image-container{
+                width:35%;
+                height: 80vh;
+            }
+            .text-container{
+                width: 65%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                h1{
+                    text-align: end;
+                }
+            }
+
+        }
+    }
+}
+</style>
