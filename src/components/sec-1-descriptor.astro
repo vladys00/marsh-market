@@ -1,4 +1,9 @@
-<section class="sec-1-descriptor ">
+---
+import {Image} from "astro:assets";
+import SliderImg1 from "../assets/slider-images/emi-photo.png";
+---
+
+<section class="sec-1-descriptor">
     <div class="test-width">
         <div class="sec-main-desc-cont ">
             <div class="desc-cont">
@@ -16,7 +21,10 @@
                 
             </div>
             <div class="img-container">
-                <img src="https://www.rainycityagency.com/cdn/shop/files/bird.jpg?v=1734546098" alt="">
+                <Image
+                    src={SliderImg1}
+                    alt="girl photoshoot image studio "
+                />
             </div>
     
         </div>
@@ -26,12 +34,13 @@
 
 <style>
 .sec-1-descriptor{
-    width: 100vw;
+    width: 100%;
     .sec-main-desc-cont{
         
         .desc-cont{
             width: 100%;
             padding: 28% 20px 30px 20px;
+            max-width: 750px;
             h2{
                 font-size: 35px;
                 width: 80%;
@@ -61,25 +70,24 @@
 @media (min-width:768px){
     .sec-1-descriptor{
         max-height: 850px;
-        height: 90vh;
+        height: fit-content;
         position: relative;
         .sec-main-desc-cont{
             padding:50px 45px;
             height: 100%;
             position: relative;
             display:flex;
-            gap:50px;
+            gap:0px;
             justify-content: space-between;
 
             .desc-cont{
-                padding: 0 0 50px 0;
-                width: 70%;
-                max-width: 750px;
+                padding: 0 50px 50px 0;
+                width: 60%;
                 display: flex;
                 flex-direction: column;
                 justify-content: end;
                 h2{
-                    font-size: 35px;
+                    font-size: 30px;
                     width: 100%;
                     .desktop-break{
                         display: block;
@@ -95,23 +103,36 @@
             .img-container{
                 position: relative;
                 height: 100%;
-                width: 50%;
-                max-width: 550px;
-                max-height: none;
+                width: 40%;
+                max-width:600px;
                 img{
                     width: 100%;
                     height: 100%;
-                    object-fit: cover;
+                    object-fit: fill;
                 }
             }
         }
     }
 }
+@media (min-width:900px){
+    .sec-1-descriptor{
 
+        .sec-main-desc-cont{
+
+            .desc-cont{
+
+                h2{
+                    font-size: 35px;
+
+                }
+
+            }
+        }
+    }
+}
 @media (min-width:1200px){
     .sec-1-descriptor{
         .sec-main-desc-cont{
-            gap:80px;
             .desc-cont{
                 h2{
                     font-size: 47px;
