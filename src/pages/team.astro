@@ -6,8 +6,8 @@ import VKImg from "../assets/images/vk-img.png"
 
 ---
 <Layout>
-    <section class="team-section center-content">
-        <div class="team-container page-width">
+    <section class="team-section">
+        <div class="team-container">
             <div class="title-container">
                 <h1>Meet the Team</h1>
             </div>
@@ -19,10 +19,10 @@ import VKImg from "../assets/images/vk-img.png"
                             alt="Portrait cofounder Emily"
                         >
                     </div>
-                    <div class="description-container">
+                    <div class="description-container intro-em">
                         <h2>Emily Yang</h2>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu 
+                            Brand and creative Strategist
                         </p>
                     </div>
                 </div>
@@ -36,7 +36,7 @@ import VKImg from "../assets/images/vk-img.png"
                     <div class="description-container">
                         <h2>Vladys Kolodnytskyy</h2>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu 
+                            Shopify developer and creative technologist
                         </p>
                     </div>
                 </div>
@@ -71,9 +71,12 @@ import VKImg from "../assets/images/vk-img.png"
                 }
                 .description-container{
                     padding:30px 0 20px 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: end;
                     h2{
                         font-size: 25px;
-                        margin-bottom: 30px;
+                        margin-bottom: 10px;
                     }
                 }
 
@@ -81,6 +84,9 @@ import VKImg from "../assets/images/vk-img.png"
             .intro-vk{
                 border-top:1px solid black;
                 padding-top: 20px;
+            }
+            .intro-em{
+                padding-bottom: 20px;
             }
         }
 
@@ -113,6 +119,9 @@ import VKImg from "../assets/images/vk-img.png"
                             height: 256px;
                         }
                     }
+                }
+                .intro-em{
+
                 }
             }
         }

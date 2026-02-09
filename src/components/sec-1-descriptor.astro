@@ -1,32 +1,77 @@
 ---
 import {Image} from "astro:assets";
 import SliderImg1 from "../assets/slider-images/emi-photo.png";
+import SliderImg2 from "../assets/slider-images/butterfly.png";
+import SliderImg3 from "../assets/slider-images/flowers.png";
+import SliderImg4 from "../assets/slider-images/hair.png";
+import SliderImg5 from "../assets/slider-images/ice-cream.png";
+import SliderImg6 from "../assets/slider-images/man-walking.png";
+import SliderImg7 from "../assets/slider-images/sand.png";
 ---
 
 <section class="sec-1-descriptor">
-    <div class="test-width">
-        <div class="sec-main-desc-cont ">
-            <div class="desc-cont">
-                <h2>
-                    We shape <br> iconic identities that perform <br class="desktop-break">—  
-                    in culture and numbers.
-                </h2>
-                <p class="main-text">
-                    Hola! Welcome to Marsh Market — a complete Shopify world for brands that never settle for less. We work inside the ecosystem — strategy, build, creativity, and performance — so nothing gets lost in translation.
-                </p>
-                
-                <a class="contact-button" href="/contact">
-                    Let`s talk
-                </a>
-                
+    <div class="sec-main-desc-cont ">
+        <div class="desc-cont">
+            <h2>
+                We shape <br> iconic identities that perform <br class="desktop-break">—  
+                in culture and numbers.
+            </h2>
+            <p class="main-text">
+                Hola! Welcome to Marsh Market — a complete Shopify world for brands that never settle for less. We work inside the ecosystem — strategy, build, creativity, and performance — so nothing gets lost in translation.
+            </p>
+            
+            <a class="contact-button" href="/contact">
+                Let`s talk
+            </a>
+            
+        </div>
+        <div class="img-container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <Image/
+                        src={SliderImg1}
+                        alt="model photo artsy blue"
+                    >
+                </div>
+                <div class="swiper-slide">
+                    <Image/
+                        src={SliderImg2}
+                        alt="buterfly wings texture"
+                    >
+                </div>
+                <div class="swiper-slide">
+                    <Image/
+                        src={SliderImg3}
+                        alt="white flowers artsy photoshoot"
+                    >                                     
+                </div>
+                <div class="swiper-slide">
+                    <Image/
+                        src={SliderImg4}
+                        alt="lock of hair on white backgorund artsy picture"
+                    > 
+                </div>
+                <div class="swiper-slide">
+                    <Image/
+                        src={SliderImg5}
+                        alt="ice cream on spoon"
+                    >
+                </div>
+                <div class="swiper-slide">
+                    <Image/
+                        src={SliderImg6}
+                        alt="man walking long exposition photo"
+                    >
+                </div>
+                <div class="swiper-slide">
+                    <Image/
+                        src={SliderImg7}
+                        alt="sand under whater photo"
+                    >                    
+                </div>
+                </div>
             </div>
-            <div class="img-container">
-                <Image
-                    src={SliderImg1}
-                    alt="girl photoshoot image studio "
-                />
-            </div>
-    
         </div>
 
     </div>
@@ -58,7 +103,13 @@ import SliderImg1 from "../assets/slider-images/emi-photo.png";
             position: relative;
             height: 540px;
             width: 100%;
-            img{
+            .swiper {
+                width: 100%;
+                height: 100%;
+            }
+
+            .swiper-slide img {
+                display: block;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
@@ -69,9 +120,9 @@ import SliderImg1 from "../assets/slider-images/emi-photo.png";
 
 @media (min-width:768px){
     .sec-1-descriptor{
-        max-height: 850px;
-        height: fit-content;
+        height: calc(100vh - 90px);
         position: relative;
+        max-height: 850px;
         .sec-main-desc-cont{
             padding:50px 45px;
             height: 100%;
@@ -142,3 +193,23 @@ import SliderImg1 from "../assets/slider-images/emi-photo.png";
     }
 }
 </style>
+
+<script>
+    import Swiper from "swiper";
+    import { Autoplay } from "swiper/modules";
+
+    import "swiper/css";
+    import "swiper/css/navigation";
+    import "swiper/css/pagination";
+
+    console.log("javascript working");
+
+     let swiper = new Swiper(".mySwiper", {
+        modules: [Autoplay],
+        loop: true,
+        autoplay: {
+        delay: 2500,       
+        disableOnInteraction: false
+        },
+     });
+</script>
