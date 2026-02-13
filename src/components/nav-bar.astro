@@ -127,15 +127,22 @@ nav{
 </style>
 
 <script>
-    const navigationBar = document.querySelector("#navigation-bar");
-    const hamburgerButton = navigationBar?.querySelector(".hamburguer-button");
-    const navContainer = navigationBar?.querySelector(".navigation-container");
-    const fadeScreen = navigationBar?.querySelector(".fade-screen");
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("we entered in the script");
 
-    
-    hamburgerButton?.addEventListener("click", ()=>{
-        navContainer?.classList.toggle("show");
-        fadeScreen?.classList.toggle("show");
-    })
+  const navigationBar = document.querySelector("#navigation-bar");
+  const hamburgerButton = navigationBar?.querySelector(".hamburguer-button");
+  const navContainer = navigationBar?.querySelector(".navigation-container");
+  const fadeScreen = navigationBar?.querySelector(".fade-screen");
+
+  console.log("this is the hamburguer button", document);
+
+  hamburgerButton?.addEventListener("click", () => {
+    console.log("we clicked the button");
+    navContainer?.classList.toggle("show");
+    fadeScreen?.classList.toggle("show");
+  });
+});
+
     
 </script>
