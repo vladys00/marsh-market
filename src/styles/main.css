@@ -22,7 +22,7 @@
   --desktop-button-size: 16px;
   --desktop-button-font: 'Quicksand', sans-serif;
   
-  --desktop-logo-size: 20px;
+  --desktop-logo-size: 22px;
   --desktop-logo-font: 'Quicksand', sans-serif;
 
   /* --------------------------
@@ -44,7 +44,7 @@
   --mobile-button-size: 16px;
   --mobile-button-font: 'Quicksand', sans-serif;
 
-  --mobile-logo-size: 20px;
+  --mobile-logo-size: 22px;
   --mobile-logo-font: 'Quicksand', sans-serif;
 }
 
@@ -91,7 +91,12 @@ body {
 .page-width{
    max-width: 2500px;
 }
-
+.italic{
+   font-style: italic;
+}
+.bold{
+   font-weight: 600;
+}
 .red{
    border:1px solid red;
 }
