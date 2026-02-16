@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import {Image} from "astro:assets";
-import EgretImage from "../assets/images/egret-sec2.webp"
+import EgretImage from "../assets/images/contact-page.png"
 ---
 <Layout>
     <section class="contact-section">
@@ -17,11 +17,17 @@ import EgretImage from "../assets/images/egret-sec2.webp"
                     <h1>Contact</h1>
                 </div>
                 <div class="links-container">
-                    <p>+34 655 066 245</p>
-                    <p>vldk0022@gmail.com</p>
+                    <div>
+                        <p>+34 655 066 245</p>
+                        <p>vldk0022@gmail.com</p>
+                    </div>
+                    <div>
+                        <a href="https://www.instagram.com/marshmarket_/">Instagram</a>
+                        <a href="https://www.instagram.com/marshmarket_/">LinkedIn</a>
+                    </div>
+                    
 
-                    <a href="https://www.instagram.com/marshmarket_/">Instagram</a>
-                    <a href="https://www.instagram.com/marshmarket_/">LinkedIn</a>
+
                 </div>
             </div>
         </div>
@@ -77,22 +83,31 @@ import EgretImage from "../assets/images/egret-sec2.webp"
     .contact-section{
         padding: 50px 45px;
         .contact-container{
-            flex-direction: row;
+            flex-direction: row-reverse;
             .image-container{
-                width:45%;
+                width:65%;
                 height: 80vh;
                 max-height: 900px;
             }
             .text-container{
                 padding: 0 0 0 30px;
-                width: 55%;
+                width: 35%;
                 display: flex;
                 flex-direction: column;
+                align-items:start;
                 .title-container{
                     h1{
                         text-align: end;
                         font-size: 47px;
+                        margin: 0;
                     }
+                }
+                .links-container{
+                    text-align: start;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
                 }
             }
 
@@ -104,11 +119,11 @@ import EgretImage from "../assets/images/egret-sec2.webp"
     .contact-section{
         .contact-container{
             .image-container{
-                width:35%;
+                width:65%;
                 height: 80vh;
             }
             .text-container{
-                width: 65%;
+                width: 35%;
             }
         }
     }

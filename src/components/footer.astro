@@ -1,23 +1,16 @@
 ---
-import MarshFooterSVG from "../assets/svgs/marsh-footer-mobile.svg"
-import ArrowRightSVG from "../assets/svgs/arrow-right.svg"
+
 ---
 <footer>
     <div class="main-footer-container">
-        <h6>2026 MarshMarket</h6>
+        <h6>© 2026 MarshMarket</h6>
         <div class="top-links-container">
-            <p class="footer-text">Talk to us or ask us anything</p>
-            <a href="/contact"><ArrowRightSVG/> Contact Us</a>
-            <a href=""><ArrowRightSVG/> Cookie policy</a>
-            <a href=""><ArrowRightSVG/> Terms of service</a>
+            <a href="/contact"> Contact Us</a>
+            <span>-</span>
+            <a href=""> Cookie policy</a>
+            <span>-</span>
+            <a href=""> Terms of service</a>
         </div>
-        <div class="bottom-links-container">
-            <a href="https://www.instagram.com/marshmarket_/"><ArrowRightSVG/> Instagram</a>
-            <a href=""><ArrowRightSVG/> LinkedIn</a>
-        </div>
-    </div>
-    <div class="svg-container">
-        <MarshFooterSVG/>
     </div>
 </footer>
 
@@ -25,78 +18,45 @@ import ArrowRightSVG from "../assets/svgs/arrow-right.svg"
 footer{
     display: flex;
     flex-direction: column;
-    color:white;
+    color:black;
     align-items: center;
     justify-content: center;
-    padding: 30px;
-    background-color: rgba(255, 148, 109, 0.192);
-    background-image: url("../assets/images/background-mobile-footer.png");
+    padding: 150px 30px 30px 30px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     h6{
-        font-weight: 500;
+        font-weight: 700;
         font-size: 16px;
         margin:0;
         text-align: center;
     }
-    .main-footer-container{
-        width: 235px;
-        .footer-text{
-            font-weight: 800;
-            font-size: 16px;
-            margin:20px 0 5px 0;
-        }
-    }
-    .top-links-container,
-    .bottom-links-container{
+    .top-links-container{
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        gap:16px;
+        align-items: center;
+        gap:5px;
         a{
             all:unset;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            svg{
-                
-                path{
-                    fill:white;
-                }
-            }
+            font-size: 14px;
         }
         a:hover {
             cursor: pointer;
-        }
-    }
-    .bottom-links-container{
-        margin-top:40px;
-    }
-    .svg-container{
-        margin-top:20%;
-        svg{
-            width: 80vw;
-            height: 10%;
         }
     }
 }
 
 @media (min-width:768px) {
     footer{
-        padding: 50px 45px;
+        padding: 150px 45px 50px 45px;
         .main-footer-container{
             width: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            gap: 20px;
             .top-links-container{
                 p{
                     margin: 0;
                 }
-            }
-            .bottom-links-container{
-                margin:0;
-                justify-content: start;
             }
         }
     }
