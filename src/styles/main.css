@@ -68,7 +68,10 @@ body {
   color: #111111;
   box-sizing: border-box;
 }
-
+.title{
+   font-size: 35px;
+   font-weight: 700;
+}
 .contact-button{
    all:unset;
    padding:5px 20px;
