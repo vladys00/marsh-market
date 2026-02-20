@@ -1,0 +1,135 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout>
+    <section class="legal">
+  <div class="legal__container">
+    <h1 class="legal__title">Legal Notice</h1>
+
+    <div class="legal__section">
+      <h2>1. Website Owner Identification</h2>
+      <p class="legal__muted">
+        In accordance with the LSSI-CE, the following information is provided:
+      </p>
+
+      <p><strong>Commercial Name:</strong> Marsh Market</p>
+      <p>
+        <strong>Activity:</strong> Brand strategy, brand identity development,
+        Shopify theme development, and web development services
+      </p>
+      <p><strong>Location:</strong> Madrid, Spain</p>
+      <p>
+        <strong>Contact Email:</strong>
+        <a href="mailto:hola@marshmarket.es">hola@marshmarket.es</a>
+      </p>
+      <p>
+        Marsh Market operates as an independent digital service provider.
+      </p>
+    </div>
+
+    <div class="legal__section">
+      <h2>2. Purpose of the Website</h2>
+      <p>
+        This website provides information regarding professional brand and web
+        development services offered by Marsh Market.
+      </p>
+      <p>
+        Accessing and using this website implies acceptance of this Legal Notice.
+      </p>
+    </div>
+
+    <div class="legal__section">
+      <h2>3. Intellectual Property</h2>
+      <p>
+        All website content — including text, branding, logos, graphics,
+        layouts, and code — is owned by Marsh Market unless otherwise stated.
+      </p>
+      <p>
+        Reproduction, distribution, or modification without prior written
+        authorization is prohibited.
+      </p>
+    </div>
+
+    <div class="legal__section">
+      <h2>4. Liability</h2>
+      <p>Marsh Market shall not be held responsible for:</p>
+      <ul>
+        <li>Misuse of website content</li>
+        <li>Temporary website unavailability</li>
+        <li>Content from external third-party websites linked from this site</li>
+      </ul>
+      <p>Users access the website at their own risk.</p>
+    </div>
+
+    <div class="legal__section">
+      <h2>5. Governing Law</h2>
+      <p>
+        This website is governed by Spanish law. Any disputes shall be
+        submitted to the courts of Madrid, Spain.
+      </p>
+    </div>
+  </div>
+</section>
+</Layout>
+
+<style>
+  .legal {
+    padding: 5rem 1.5rem;
+  }
+
+  .legal__container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .legal__title {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    margin-bottom: 3rem;
+    letter-spacing: -0.02em;
+  }
+
+  .legal__section {
+    margin-bottom: 3rem;
+  }
+
+  .legal__section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .legal__muted {
+    color: #6b7280;
+    font-size: 0.95rem;
+  }
+
+  .legal p {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+  }
+
+  .legal ul {
+    padding-left: 1.2rem;
+    margin: 1rem 0;
+  }
+
+  .legal li {
+    margin-bottom: 0.5rem;
+  }
+
+  .legal a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  @media (max-width: 768px) {
+    .legal {
+      padding: 3rem 1.25rem;
+    }
+
+    .legal__section {
+      margin-bottom: 2.5rem;
+    }
+  }
+</style>

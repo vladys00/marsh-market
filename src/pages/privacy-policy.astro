@@ -1,0 +1,181 @@
+---
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout>
+<section class="legal">
+  <div class="legal__container">
+    <h1 class="legal__title">Privacy Policy</h1>
+    <p class="legal__muted">Marsh Market</p>
+    <p class="legal__muted">Last updated: 20/02/2026</p>
+
+    <div class="legal__section">
+      <h2>1. Data Controller</h2>
+      <p><strong>Commercial Name:</strong> Marsh Market</p>
+      <p><strong>Location:</strong> Madrid, Spain</p>
+      <p>
+        <strong>Contact:</strong>
+        <a href="mailto:hola@marshmarket.es">hola@marshmarket.es</a>
+      </p>
+    </div>
+
+    <div class="legal__section">
+      <h2>2. Legal Framework</h2>
+      <p>This Privacy Policy is drafted in accordance with:</p>
+      <ul>
+        <li>General Data Protection Regulation (GDPR)</li>
+        <li>Ley Orgánica 3/2018</li>
+      </ul>
+    </div>
+
+    <div class="legal__section">
+      <h2>3. Personal Data Collected</h2>
+      <p>
+        At this time, Marsh Market does not actively collect personal data through:
+      </p>
+      <ul>
+        <li>Contact forms</li>
+        <li>Newsletter subscriptions</li>
+        <li>User accounts</li>
+        <li>Online payments</li>
+      </ul>
+
+      <p>
+        If a user contacts Marsh Market directly via email, the following data
+        may be processed:
+      </p>
+      <ul>
+        <li>Name</li>
+        <li>Email address</li>
+        <li>Information voluntarily included in the message</li>
+      </ul>
+    </div>
+
+    <div class="legal__section">
+      <h2>4. Purpose of Processing</h2>
+      <p>Personal data received via email is processed exclusively for:</p>
+      <ul>
+        <li>Responding to inquiries</li>
+        <li>Providing requested information</li>
+        <li>Initiating potential professional collaboration</li>
+      </ul>
+    </div>
+
+    <div class="legal__section">
+      <h2>5. Legal Basis</h2>
+      <p>
+        The legal basis for processing is the user’s consent, given voluntarily
+        when contacting Marsh Market.
+      </p>
+    </div>
+
+    <div class="legal__section">
+      <h2>6. Data Retention</h2>
+      <p>
+        Personal data will be retained only for as long as necessary to manage
+        communication and potential business relationships.
+      </p>
+    </div>
+
+    <div class="legal__section">
+      <h2>7. Data Sharing</h2>
+      <p>
+        Marsh Market does not sell, rent, or share personal data with third
+        parties, except when legally required.
+      </p>
+      <p>
+        The website is hosted by Hostinger, which may process technical server
+        data necessary for website operation.
+      </p>
+    </div>
+
+    <div class="legal__section">
+      <h2>8. User Rights</h2>
+      <p>In accordance with the GDPR, users have the right to:</p>
+      <ul>
+        <li>Access their personal data</li>
+        <li>Request rectification</li>
+        <li>Request erasure</li>
+        <li>Restrict processing</li>
+        <li>Object to processing</li>
+        <li>Request data portability</li>
+      </ul>
+      <p>
+        To exercise these rights, please contact:
+        <a href="mailto:hola@marshmarket.es">hola@marshmarket.es</a>
+      </p>
+    </div>
+
+    <div class="legal__section">
+      <h2>9. Data Security</h2>
+      <p>
+        Appropriate technical and organizational measures are implemented to
+        protect personal data against unauthorized access, alteration, or loss.
+      </p>
+    </div>
+  </div>
+</section>    
+</Layout>
+
+<style>
+  .legal {
+    padding: 5rem 1.5rem;
+  }
+
+  .legal__container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .legal__title {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .legal__section {
+    margin-top: 3rem;
+  }
+
+  .legal__section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .legal__muted {
+    color: #6b7280;
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .legal p {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+  }
+
+  .legal ul {
+    padding-left: 1.2rem;
+    margin: 1rem 0;
+  }
+
+  .legal li {
+    margin-bottom: 0.5rem;
+  }
+
+  .legal a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  @media (max-width: 768px) {
+    .legal {
+      padding: 3rem 1.25rem;
+    }
+
+    .legal__section {
+      margin-top: 2.5rem;
+    }
+  }
+</style>
