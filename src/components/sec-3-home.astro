@@ -10,11 +10,11 @@
             <div class="upper-container">
                 <h2>
                     Two focused ways we help <br class="desktop-br">
-                    brand-first businesses move forward—with clarity, character, <span class="italic">and</span> impact.
+                    brand-first businesses move forward—with clarity, character, and impact.
                 </h2>
-                <a href="/contact" class="contact-button">Write to us</a>
+                <a href="/contact" class="contact-button hide-on-mobile">Write to us</a>
             </div>
-            <p class="offerings-into">Our Signature Offers are designed to work independently—and even more powerfully together.</p>
+            <p class="offerings-into hide-on-mobile">Our Signature Offers are designed to work independently—and even more powerfully together.</p>
         </div>
 
         <div class="offerings-container">
@@ -26,7 +26,7 @@
                     />
                 </div>
                 <h3>Brand-led Shopify Launch / Makeover</h3>
-                <p>Design and engineer a distinctive, high-performing Shopify ecosystem—fully customized to your brand identity and built to delight, engage, and scale.</p>
+                <p>Design and engineer a distinctive, high-performing Shopify ecosystem—fully customized to your brand identity, built to delight, engage, and scale.</p>
             </div>
             <div class="offering off-2">
                 <div class="offering-texture">
@@ -39,23 +39,40 @@
                 <p>Channel your brand essence into a high-impact creative campaign—activated across your Shopify experience to convert attention into action and foster advocacy.</p>
             </div>
         </div>
+
+        <div class="ending-mobile hide-on-desktop">
+            <p class="offerings-intro hide-on-desktop">Our Signature Offers are designed to work independently—and even more powerfully together.</p>
+            <a href="/contact" class="contact-button hide-on-desktop">Write to us</a>
+        </div>
     </div>
 </section>
 
 <style>
 .sec-3-home{
+    .hide-on-mobile{
+        display:none;
+    }
+    .hide-on-desktop{
+        display:block;
+    }{
+        display:none;
+    }
+    .hide-on-desktop{
+        display:block;
+    }
+    
     .inner-cont{
-        padding: 30px 20px;
+        padding:28% 20px 30px 20px;
         .title-cont{
             margin-bottom: 40px;
             h2{
                 font-size: 35px;
+                line-height: 1.3;
                 .desktop-br{
                     display: none;
                 }
             }
             .contact-button{
-                display: block;
                 width: fit-content;
                 margin:20px 0 60px 0; 
             }
@@ -65,8 +82,8 @@
         }
     }
     .offerings-container{
-        border-top:1px solid black;
-        padding-top:40px;
+        border-bottom:1px solid black;
+        padding:40px 0;
         .offering{
             .offering-texture{
                 width: 35px;
@@ -85,10 +102,24 @@
             margin-top:30px;
         }
     }
+    .ending-mobile{
+        .offerings-intro{
+            padding: 20px 0;
+        }
+        .contact-button{
+            width: fit-content;
+        }
+    }
 }
 
 @media (min-width:768px){
     .sec-3-home{
+    .hide-on-mobile{
+        display:block;
+    }
+    .hide-on-desktop{
+        display:none;
+    }
         .inner-cont{
             padding: 50px 45px 100px 45px;
             display: flex;

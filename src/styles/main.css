@@ -10,7 +10,7 @@
   --desktop-title1-font: 'Quicksand', sans-serif;
 
   --desktop-title2-size: 30px;
-  --desktop-title2-weight: 700; /* Bold */
+  --desktop-title2-weight: bold; 
   --desktop-title2-font: 'Quicksand', sans-serif;
 
   --desktop-title-page-size: 47px;
@@ -32,7 +32,7 @@
   --mobile-title1-font: 'Quicksand', sans-serif;
 
   --mobile-title2-size: 30px;
-  --mobile-title2-weight: 700; /* Bold */
+  --mobile-title2-weight: bold; 
   --mobile-title2-font: 'Quicksand', sans-serif;
 
   --mobile-title-page-size: 35px;
@@ -81,7 +81,7 @@ body {
 .contact-button:hover{
    cursor:pointer;
 }
-.bold-text{
+.bold{
    font-weight: 800;
 }
 .center-content{
@@ -93,9 +93,6 @@ body {
 }
 .italic{
    font-style: italic;
-}
-.bold{
-   font-weight: 600;
 }
 .red{
    border:1px solid red;
