@@ -1,5 +1,7 @@
 ---
 import HamburguerSVG from "../assets/svgs/hamburger.svg"
+import CloseMenu from "../assets/svgs/close-menu.svg"
+const currentPath = Astro.url.pathname;
 ---
 <nav id="navigation-bar">
     <div class="nav-main-container page-width">
@@ -8,12 +10,13 @@ import HamburguerSVG from "../assets/svgs/hamburger.svg"
         </div>
 
         <button class="hamburguer-button">
-            <HamburguerSVG></HamburguerSVG>
+            <HamburguerSVG class="hamburguer-svg"></HamburguerSVG>
+            <CloseMenu class="close-menu-svg"></CloseMenu> 
         </button>
 
         <div class="navigation-container">
-            <a href="/team">Team</a>
-            <a href="/contact">Contact</a>
+            <a href="/team" class={currentPath === '/team' ? 'active' : ''}>Team</a>
+            <a href="/contact" class={currentPath === '/contact' ? 'active' : ''}>Contact</a>
         </div>
         
         <div class="fade-screen"></div>
@@ -21,7 +24,9 @@ import HamburguerSVG from "../assets/svgs/hamburger.svg"
 </nav>
 
 <style>
-
+.navigation-container a.active {
+color: black;
+}
 nav{
     width: 100%;
 
@@ -48,6 +53,27 @@ nav{
         }
         .hamburguer-button{
             all:unset;
+            position: relative;
+            width: 23px;
+            height: 33px;
+            .hamburguer-svg{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 1;
+                transition: opacity 0.4s ease;
+            }
+            .hamburguer-svg.hidden{
+                opacity:0;
+            }
+            .close-menu-svg{
+                height: 33px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
             
         }
 
@@ -132,14 +158,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const navigationBar = document.querySelector("#navigation-bar");
   const hamburgerButton = navigationBar?.querySelector(".hamburguer-button");
+  const hamburguerSVG = navigationBar?.querySelector(".hamburguer-svg");
+  const closeMenuSVG = navigationBar?.querySelector(".close-menu-svg");
   const navContainer = navigationBar?.querySelector(".navigation-container");
   const fadeScreen = navigationBar?.querySelector(".fade-screen");
+  
 
 
   hamburgerButton?.addEventListener("click", () => {
-    console.log("we clicked the button");
     navContainer?.classList.toggle("show");
     fadeScreen?.classList.toggle("show");
+    hamburguerSVG?.classList.toggle("hidden");
   });
 });
 

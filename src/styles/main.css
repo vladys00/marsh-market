@@ -103,3 +103,7 @@ body {
 .blue{
    border:1px solid blue;
 }
+.current-page{
+   color:black;
+   text-decoration: underline;
+}
