@@ -1,20 +1,19 @@
 ---
 import { Image } from "astro:assets";
-import egretImage from "../assets/images/egret-sec2.webp";
+import egretImage from "../assets/images/egret-sec-2.png";
 ---
 
 <section class="sec-2-descriptor ">
     <div class="sec-main-desc-cont ">
         <div class="desc-cont">
-            <h2>
-                We connect <br>
-                brand, Shopify, and creativity to build more authentic commerce.    
+            <h2 class="main-title">
+                We connect brand, <br>Shopify, and creativity<br> to build more authentic<br> commerce.    
             </h2>
-            <p class="main-text">
-            Unlike the average Shopify dev shop or traditional design agency, <span class="bold">we speak commerce, art, code, numbers, and culture—like it’s second nature.</span>
+            <p class="main-text text-top">
+            Unlike the average Shopify dev shop or traditional design agency, we speak commerce, art, code, numbers, and culture—like it’s second nature.
             </p>
-            <p class="bottom-paragraph"> 
-                We believe growth shouldn’t require compromise. That’s why we unite brand expertise, strategic clarity, technical reliability, and cultural fluency into one integrated practice, <span class="bold">partnering with brand-first businesses driven by purpose and soul.</span> 
+            <p class="bottom-paragraph main-text"> 
+                We believe growth shouldn’t require compromise. That’s why we unite brand expertise, strategic clarity, technical reliability, and cultural fluency into one integrated practice, partnering with brand-first businesses driven by purpose and soul.
             </p>
             
             
@@ -39,14 +38,13 @@ import egretImage from "../assets/images/egret-sec2.webp";
             width: 100%;
             padding: 28% 20px 30px 20px;
             h2{
-                font-size: 35px;
-                width: 80%;
+                width: 100%;
                 line-height: 1.3;
                 .desktop-break{
                     display: none;
                 }
             }
-            .main-text{
+            .text-top{
                 margin:20px 0;
             }
             .bottom-paragraph{
@@ -69,8 +67,6 @@ import egretImage from "../assets/images/egret-sec2.webp";
 
 @media (min-width:768px){
     .sec-2-descriptor{
-        max-height: 850px;
-        height: 90vh;
         position: relative;
         .sec-main-desc-cont{
             padding:50px 45px;
@@ -78,39 +74,38 @@ import egretImage from "../assets/images/egret-sec2.webp";
             position: relative;
             display:flex;
             flex-direction: row-reverse;
-            gap:0px;
+            gap:30px;
             justify-content: space-between;
+            align-items: end;
 
             .desc-cont{
-                padding: 0 0 50px 50px;
+                padding: 0;
                 width: 60%;
-                max-width: 750px;
+                max-width: 475px;
                 display: flex;
                 flex-direction: column;
                 justify-content: end;
                 h2{
-                    font-size: 35px;
                     width: 100%;
                     .desktop-break{
                         display: block;
                     }
                 }
-                .main-text {
-                    margin: 34px 0;
+                .text-top {
+                    margin: 35px 0 20px 0;
+                } 
+                .bottom-paragraph{
+                    margin:0;
                 }
                 .contact-button{
                     width: fit-content;
                 }
-                .bottom-paragraph{
-                    margin-bottom:34px;
-                }
             }
             .img-container{
                 position: relative;
-                height: 100%;
-                width: 60%;
-                max-width: 500px;
-                max-height: none;
+                aspect-ratio: 490/655;
+                width: 320px; 
+                height: 485px;
                 img{
                     width: 100%;
                     height: 100%;
@@ -126,9 +121,11 @@ import egretImage from "../assets/images/egret-sec2.webp";
     .sec-2-descriptor{
         .sec-main-desc-cont{
             .desc-cont{
-                h2{
-                    font-size: 47px;
-                }
+                max-width: 580px;
+            }
+            .img-container{
+                width: 490px;
+                height: 655px;
             }
         }
     }
