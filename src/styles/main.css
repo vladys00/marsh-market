@@ -16,10 +16,10 @@
   --desktop-title-page-size: 47px;
   --desktop-title-page-font: 'Quicksand', sans-serif;
 
-  --desktop-font-size: 16px;
+  --desktop-font-size: 24px;
   --desktop-font-type: 'Quicksand', sans-serif;
 
-  --desktop-button-size: 16px;
+  --desktop-button-size: 24px;
   --desktop-button-font: 'Quicksand', sans-serif;
   
   --desktop-logo-size: 22px;
@@ -68,10 +68,37 @@ body {
   color: #111111;
   box-sizing: border-box;
 }
+/* FONT SIZES */
+.main-title{
+   font-size: 29px;
+   line-height: 1;
+}
+.main-text{
+   font-size: 18px;
+   line-height: 1.24;
+}
+@media (min-width: 768px) {
+   .main-title{
+      font-size: 30px;
+   }
+   .main-text{
+      font-size: 20px;
+   }
+}
+@media (min-width: 1200px) {
+   .main-title{
+      font-size: 47px;
+   }
+   .main-text{
+      font-size: 24px;
+   }
+}
+
 .title{
    font-size: 35px;
    font-weight: 700;
 }
+/* BUTTONS */
 .contact-button{
    all:unset;
    padding:5px 20px;
