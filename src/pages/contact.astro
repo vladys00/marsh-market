@@ -14,14 +14,14 @@ import EgretImage from "../assets/images/contact-page.webp"
             </div>  
             <div class="text-container">
                 <div class="title-container">
-                    <h1>Contact</h1>
+                    <h1 class="main-title">Contact</h1>
                 </div>
                 <div class="links-container">
-                    <div>
+                    <div class="contact-info">
                         <p>+34 655 066 245</p>
-                        <p>hola@marshmarket.es</p>
+                        <p><a href="mailto:hola@marshmarket.es">hola@marshmarket.es</a></p>
                     </div>
-                    <div>
+                    <div class="social-links">
                         <a href="https://www.instagram.com/marshmarket_/">Instagram</a>
                         <a href="https://www.linkedin.com/in/marsh-market/">LinkedIn</a>
                     </div>
@@ -57,13 +57,19 @@ import EgretImage from "../assets/images/contact-page.webp"
             .title-container{
                 h1{
                     font-weight: 700;
-                    font-size: 35px;
                     margin-bottom: 50px;
                 }
             }
             .links-container{
                 padding: 20px 0;
                 text-align: right;
+                .contact-info,
+                .social-links{
+                    font-size: 20px;
+                }
+                .social-links{
+                    margin-top: 20px;
+                }
                 a{
                     all:unset;
                     display: block;
@@ -72,9 +78,7 @@ import EgretImage from "../assets/images/contact-page.webp"
                     cursor: pointer;
                 }
             }
-            .links-container a:first-of-type{
-                margin-top:20px;
-            }
+
         }
     }
 }
@@ -121,6 +125,9 @@ import EgretImage from "../assets/images/contact-page.webp"
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
+                    .social-links{
+                        margin-top: 0;
+                    }
                 }
             }
 
@@ -142,21 +149,4 @@ import EgretImage from "../assets/images/contact-page.webp"
     }
 }
 
-@media (min-width:1200px){
-    .contact-section{
-        .contact-container{
-            .text-container{
-                .title-container{
-                    h1{
-
-                        font-size: 47px;
-
-                    }
-                }
-
-            }
-
-        }
-    }
-}
 </style>
