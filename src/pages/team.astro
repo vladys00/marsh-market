@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import {Image} from "astro:assets";
 import EmImg from "../assets/images/em-img.jpg"
 import VKImg from "../assets/images/vk-img.png"
+import MarshImg from "../assets/images/marshall-img.png"
 
 ---
 <Layout>
@@ -41,6 +42,21 @@ import VKImg from "../assets/images/vk-img.png"
                         </p>
                     </div>
                 </div>
+                <div class="intro-card intro-marshall">
+                    <div class="image-container">
+                        <Image/
+                            src={MarshImg}
+                            alt="Portrait cofounder Marshall"
+                        >
+                    </div>
+                    <div class="description-container">
+                        <h2>Marshall Guan</h2>
+                        <p>
+                            Product Engineer & <br> 
+                            Digital Artist
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -66,6 +82,7 @@ import VKImg from "../assets/images/vk-img.png"
                         width: 114px;
                         height: 100%;
                         object-fit: cover;
+                        object-position: top;
                     }
                 }
                 .description-container{
@@ -83,9 +100,11 @@ import VKImg from "../assets/images/vk-img.png"
                 }
 
             }
-            .intro-vk{
+            .intro-vk,
+            .intro-marshall{
                 border-top:1px solid black;
                 padding-top: 20px;
+                padding-bottom: 20px;
             }
             .intro-em{
                 padding-bottom: 20px;
