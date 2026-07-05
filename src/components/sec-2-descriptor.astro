@@ -7,14 +7,15 @@ import egretImage from "../assets/images/egret-sec-2.png";
     <div class="sec-main-desc-cont ">
         <div class="desc-cont">
             <h2 class="main-title">
-                We connect brand, <br>Shopify, and creativity<br> to build more authentic<br> commerce.    
+                Build a more <br>authentic world <br> with us.
             </h2>
             <p class="main-text text-top">
-            Unlike the average Shopify dev shop or traditional design agency, we speak commerce, art, code, numbers, and culture—like it’s second nature.
+            With total cross-disciplinary fluidity,<br>
+            we architect bespoke 360º ecosystems<br>
+            that nurture your essence while<br>
+            multiplying impact.
             </p>
-            <p class="bottom-paragraph main-text"> 
-                We believe growth shouldn’t require compromise. That’s why we unite brand expertise, strategic clarity, technical reliability, and cultural fluency into one integrated practice, partnering with brand-first businesses driven by purpose and soul.
-            </p>
+           
             
             
         </div>
@@ -47,9 +48,6 @@ import egretImage from "../assets/images/egret-sec-2.png";
             .text-top{
                 margin:20px 0;
             }
-            .bottom-paragraph{
-                margin-bottom:20px;
-            }
 
         }
         .img-container{
@@ -76,11 +74,11 @@ import egretImage from "../assets/images/egret-sec-2.png";
             flex-direction: row-reverse;
             gap:30px;
             justify-content: space-between;
-            align-items: end;
+            align-items: start;
 
             .desc-cont{
-                padding: 0;
-                width: 60%;
+                padding: 65px 0 0 0;
+                width: fit-content;
                 max-width: 475px;
                 display: flex;
                 flex-direction: column;
@@ -119,6 +117,9 @@ import egretImage from "../assets/images/egret-sec-2.png";
 @media (min-width:500px) and (max-width:768px){
     .sec-2-descriptor{
         .sec-main-desc-cont{
+            .desc-cont{
+                width: 490px;
+            }
             .img-container{
                 img{
                     object-position: center 21%;
@@ -132,6 +133,7 @@ import egretImage from "../assets/images/egret-sec-2.png";
         .sec-main-desc-cont{
             .desc-cont{
                 max-width: 580px;
+                width: 490px;
             }
             .img-container{
                 width: 490px;

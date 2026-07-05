@@ -1,51 +1,35 @@
----
- import texture1 from "../assets/images/texture-offer-1.png"
- import texture2 from "../assets/images/texture-offer-2.png"
- import {Image} from "astro:assets"
----
+
 
 <section class="sec-3-home ">
     <div class="inner-cont">
         <div class="title-cont">
-            <div class="upper-container">
-                <h2 class="main-title">
-                    Two focused ways we help <br>
-                    brand-first businesses <br> move forward—with <br>clarity, character, and <br> impact.
-                </h2>
-                <a href="/contact" class="contact-button">Write to us</a>
-            </div>
+            <h2 class="main-title">
+                Yes, we work <br> our magic. 
+            </h2>
+            <p class="main-text subtitle">
+                Take a look at some of our specialties <br> you might fall in love with.
+            </p>
+            <a href="/contact" class="contact-button">Hablamos?</a>
         </div>
 
         <div class="offerings-container main-text">
             <div class="offerings-inner-cont">
-                <div class="offering off-1">
-                    <div class="off-title-container">
-                        <div class="offering-texture">
-                            <Image
-                                src={texture1}
-                                alt="Description of image"
-                            />
-                        </div>
-                        <h3>Brand-led Shopify Launch / Makeover</h3>
-                    </div>
-                    <p>Design and engineer a distinctive, high-performing Shopify ecosystem—fully customized to your brand identity, built to delight, engage, and scale.</p>
-                </div>
-                <div class="offering off-2">
-                    <div class="off-title-container">
-                        <div class="offering-texture">
-                            <Image
-                                src={texture2}
-                                alt="Description of image"
-                            />
-                        </div>
-                        <h3>Brand-to-cart creative</h3>
-                    </div>
-                    <p>Channel your brand essence into a high-impact creative campaign—activated across your Shopify experience to convert attention into action and foster advocacy.</p>
-                </div>
+                <ul>
+                    <li>Strategic Identity</li>
+                    <li>Growth Strategy</li>
+                    <li>Portfolio Optimization</li>
+                    <li>Brand Architecture</li>
+                    <li>Business Case Planning</li>
+                    <li>Digital Transformation</li>
+                    <li>AI Infrastructure</li>
+                    <li>Agentic AI</li>
+                    <li>ML Model Development</li>
+                    <li>Cloud CI/CD</li>
+                    <li>Data Pipelines</li>
+                    <li>Creative Direction</li>
+                </ul>
             </div>
-            <div class="offerings-intro-container">
-                <p class="offerings-intro  main-text">Our Signature Offers are designed to work independently—and even more powerfully together.</p>
-            </div>
+
         </div>
 
 
@@ -53,79 +37,33 @@
 </section>
 
 <style>
-
-@media (max-width:409px){
-    .sec-3-home{
-        .inner-cont{
-            .title-cont{
-                .upper-container{
-                    h2{
-                        br{
-                            display: none;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}    
 .sec-3-home{
-        .inner-cont{
+    .inner-cont{
         padding:28% 20px 30px 20px;
         .title-cont{
-            h2{
-                .desktop-br{
-                    display: none;
-                }
+            display: flex;
+            flex-direction: column;
+            min-height: 240px;
+            .subtitle{
+                margin-top:35px;
             }
             .contact-button{
                 width: fit-content;
                 display: block;
-                margin:40px 0 10px 0; 
+                margin-top:auto; 
             }
         }
     }
     .offerings-container{
-        padding:25px 0 40px 0;
-        .offerings-inner-cont{
-            padding-bottom:20px;
+        ul{
+            list-style: none;
+            margin-top:40px;
+            padding:10px 25px;
+            border-top: 1.5px solid #a8a8a8;
         }
-        .offering{
-            .off-title-container{
-                display: flex;
-                align-items: top;
-                gap: 10px;
-                margin-bottom: 15px;
-                .offering-texture{
-                    width: 15px;
-                    height: 15px;
-                    flex-shrink: 0;
-                    margin-top:5px;
-                    img{
-                        border-radius: 50%;
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
-                h3{
-                    margin: 0;
-                }
-            }
-        }
-        .off-2{
-            margin-top:30px;
-        }
+
     }
-    .offerings-intro-container{
-        .offerings-intro{
-            padding-top:20px;
-            font-weight: 600;
-            border-top: 1px solid black;
-        }
-        .contact-button{
-            width: fit-content;
-        }
-    }
+
 }
 
 @media (min-width:768px){
@@ -134,92 +72,33 @@
             padding: 100px 45px 100px 45px;
             display: flex;
             justify-content: space-between;
-            .title-cont{
-                margin-bottom: 20px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                min-width: 413px;
-                h2{
-                    .desktop-br{
-                        display: block;
-                    }
-                    margin-right: 30px;
-                }
-                .contact-button{
-                    display: block;
-                    width: fit-content;
-                    margin:70px 0; 
-                }
-                .offerings-intro{
-                    font-weight: 600;
-                    margin-right: 30px;
-                }
-            }
+
             .offerings-container{
                 border-bottom: none;
                 padding:0;
-                max-width:490px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                height: 455px;
-                .offering{
-                    .offering-texture{
-                        width: 20px !important;
-                        height: 20px !important;  
-                    }
-                    h3{
-                        margin: 0;
-                        font-size: 20px;
-                    }
+                ul{
+                    margin-top:0;
+                    border-top:none;
+                    list-style: none;
+                    padding:10px 25px;
+                    border-left: 1.5px solid #a8a8a8;
                 }
-                .off-2{
-                    margin-top:30px;
-                }
+
             }
         }
     }
-}
-@media (min-width: 768px) and (max-width: 901px) {
-  .sec-3-home{
-    .inner-cont{
-       .offerings-container{
-        .off-1{
-            .off-title-container {
-                align-items: start;
-                .offering-texture{
-                    margin-top:5px;
-                }
-            }
-        }
-       } 
-    }
-  }
 }
 @media (min-width:1200px){
     .sec-3-home{
         .inner-cont{
-            .title-cont{
-                .button{
-                    margin:110px 0; 
-                }
-            }
-             .offerings-container{
-                height: 555px;
-                .offering{
-                    .off-title-container{
-                        .offering-texture{
-                            width: 25px !important;
-                            height: 25px !important;  
-                        }
-                        h3{
-                            font-size: 24px;
-                        }
-                    }
-                }
+            .offerings-container{
+                width:490px;
             }
         }
     }
 }
+
 </style>
