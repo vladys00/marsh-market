@@ -9,7 +9,7 @@
             <p class="main-text subtitle">
                 Take a look at some of our specialties <br> you might fall in love with.
             </p>
-            <a href="/contact" class="contact-button">Hablamos?</a>
+            <a href="/contact" class="contact-button desktop">Hablamos?</a>
         </div>
 
         <div class="offerings-container main-text">
@@ -32,18 +32,26 @@
 
         </div>
 
+        <a href="/contact" class="contact-button mobile">Hablamos?</a>
+
 
     </div>
 </section>
 
 <style>
+   
 .sec-3-home{
     .inner-cont{
         padding:28% 20px 30px 20px;
+
+        .mobile{
+            display: block;
+            width: fit-content;
+            margin-top: 40px;
+        }
         .title-cont{
             display: flex;
             flex-direction: column;
-            min-height: 240px;
             .subtitle{
                 margin-top:35px;
             }
@@ -52,13 +60,16 @@
                 display: block;
                 margin-top:auto; 
             }
-        }
+            .contact-button.desktop{
+                display:none;
+            }
+         }
     }
     .offerings-container{
         ul{
             list-style: none;
             margin-top:40px;
-            padding:10px 25px;
+            padding:10px 0px;
             border-top: 1.5px solid #a8a8a8;
         }
 
@@ -72,7 +83,14 @@
             padding: 100px 45px 100px 45px;
             display: flex;
             justify-content: space-between;
-
+            .contact-button.mobile{
+                display:none;
+            }
+            .title-cont{
+                .contact-button.desktop{
+                    display:block;
+                }
+            }
             .offerings-container{
                 border-bottom: none;
                 padding:0;
