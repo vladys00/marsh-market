@@ -1,7 +1,7 @@
 
 
 <section class="sec-3-home ">
-    <div class="inner-cont">
+    <div class="inner-cont sec-main-padding">
         <div class="title-cont">
             <h2 class="main-title">
                 Yes, we work <br> our magic. 
@@ -21,6 +21,7 @@
                     <li>Brand Architecture</li>
                     <li>Business Case Planning</li>
                     <li>Digital Transformation</li>
+                    <div style="margin:20px"></div>
                     <li>AI Infrastructure</li>
                     <li>Agentic AI</li>
                     <li>ML Model Development</li>
@@ -29,10 +30,10 @@
                     <li>Creative Direction</li>
                 </ul>
             </div>
+            <a href="/contact" class="contact-button mobile">Hablamos?</a>
 
         </div>
 
-        <a href="/contact" class="contact-button mobile">Hablamos?</a>
 
 
     </div>
@@ -42,19 +43,15 @@
    
 .sec-3-home{
     .inner-cont{
-        padding:28% 20px 30px 20px;
-
         .mobile{
             display: block;
             width: fit-content;
-            margin-top: 40px;
+            margin-top: 25px;
         }
         .title-cont{
-            display: flex;
-            flex-direction: column;
-            .subtitle{
-                margin-top:35px;
-            }
+            padding: 30px 20px 50px 20px;
+            display:grid;
+            gap:20px;
             .contact-button{
                 width: fit-content;
                 display: block;
@@ -66,10 +63,11 @@
          }
     }
     .offerings-container{
+        padding: 0 20px 50px 20px;
         ul{
+            font-weight:500;
             list-style: none;
-            margin-top:40px;
-            padding:10px 0px;
+            padding:25px 0px;
             border-top: 1.5px solid #a8a8a8;
         }
 
@@ -77,46 +75,58 @@
 
 }
 
-@media (min-width:768px){
+@media (width > 768px){
     .sec-3-home{
         .inner-cont{
-            padding: 100px 45px 100px 45px;
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             .contact-button.mobile{
                 display:none;
             }
             .title-cont{
+                padding: 53px 20px 50px 20px;
                 .contact-button.desktop{
                     display:block;
+                    font-size: 20px;
                 }
             }
             .offerings-container{
                 border-bottom: none;
                 padding:0;
+                border-left: 1.5px solid #a8a8a8;
                 display: flex;
-                flex-direction: column;
-                justify-content: space-between;
+                justify-content: end;
                 ul{
                     margin-top:0;
                     border-top:none;
                     list-style: none;
-                    padding:10px 25px;
-                    border-left: 1.5px solid #a8a8a8;
+                    min-width:320px;
+                    
                 }
 
             }
         }
     }
 }
-@media (min-width:1200px){
+@media (width > 1200px){
     .sec-3-home{
         .inner-cont{
+            .title-cont{
+                .contact-button.desktop{
+                    font-size: 30px;
+                }
+            }
             .offerings-container{
-                width:490px;
+                ul{
+                    min-width:490px;
+                    
+                }
+
             }
         }
     }
 }
+
+
 
 </style>

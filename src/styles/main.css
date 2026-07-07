@@ -68,7 +68,24 @@ body {
   color: #111111;
   box-sizing: border-box;
 }
-/* FONT SIZESs */
+nav,main{
+   max-width: 1750px;
+   margin-inline: auto;
+}
+/* MAIN */
+@media (width > 758px){
+   .sec-main-padding{
+      padding: 80px 45px;
+   }
+
+}
+@media (width > 900px){
+   .sec-main-padding{
+      padding: 100px 65px;
+   }
+
+}
+/* FONT SIZES */
 .main-title{
    font-size: 29px;
    line-height: 1;
@@ -77,22 +94,15 @@ body {
    font-size: 18px;
    line-height: 1.24;
 }
-@media (min-width: 950px) {
+@media (min-width: 1200px) {
    .main-title{
-      font-size: 50px;
+      font-size: 60px;
    }
    .main-text{
-      font-size: 23px;
+      font-size: 27px;
    }
 }
-@media (min-width: 1300px) {
-   .main-title{
-      font-size: 55px;
-   }
-   .main-text{
-      font-size: 25px;
-   }
-}
+
 
 .title{
    font-size: 35px;
@@ -116,6 +126,7 @@ body {
 }
 .contact-button:hover{
    cursor:pointer;
+   background-color: #FFF762;
 }
 .bold{
    font-weight: 800;
