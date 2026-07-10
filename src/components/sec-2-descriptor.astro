@@ -3,31 +3,29 @@ import { Image } from "astro:assets";
 import egretImage from "../assets/images/babies.png";
 ---
 
-<section class="sec-2-descriptor">
-    <div class="sec-main-desc-cont sec-main-padding">
-        <div class="desc-cont">
-            <h2 class="main-title">
-                Build a more <br>authentic world <br> with us.
-            </h2>
-            <p class="main-text text-top">
-            With total cross-disciplinary fluidity,<br>
-            we architect bespoke 360º ecosystems<br>
-            that nurture your essence while<br>
-            multiplying impact.
-            </p>
-           
-            
-            
+<section class="sec-2-descriptor panel">
+    <div class="height-setter sec2-main-padding"> 
+        <div class="sec-main-desc-cont">
+            <div class="desc-cont">
+                <h2 class="main-title">
+                    Build a more <br>authentic world <br> with us.
+                </h2>
+                <p class="main-text text-top">
+                With total cross-disciplinary fluidity,<br>
+                we architect bespoke 360º ecosystems<br>
+                that nurture your essence while<br>
+                multiplying impact.
+                </p>
+            </div>
+            <div class="img-container">
+                <Image
+                src={egretImage}
+                alt="Description of image"
+                width={1200}
+                height={799}
+                />
+            </div>
         </div>
-        <div class="img-container">
-            <Image
-            src={egretImage}
-            alt="Description of image"
-            width={1200}
-            height={799}
-            />
-        </div>
-
     </div>
 </section>
 
@@ -35,7 +33,7 @@ import egretImage from "../assets/images/babies.png";
 
 .sec-2-descriptor{
     .desc-cont{
-        padding: 30px 20px 50px 20px;
+        padding: 170px 20px 50px 20px;
         display:grid;
         gap:20px;
     }

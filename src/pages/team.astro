@@ -7,38 +7,40 @@ import VKImg from "../assets/images/vk-img.png"
 ---
 <Layout>
     <section class="team-section">
-        <div class="team-container">
-            <div class="title-container">
-                <h1 class="main-title">Meet the Team</h1>
-            </div>
-            <div class="intro-container">
-                <div class="intro-card intro-em">
-                    <div class="image-container">
-                        <Image/
-                            src={EmImg}
-                            alt="Portrait cofounder Emily"
-                        >
-                    </div>
-                    <div class="description-container intro-em">
-                        <h2>Emily Yang</h2>
-                        <p>
-                            Founder, Strategist & <br> Creative Director
-                        </p>
-                    </div>
+        <div class="height-setter">
+            <div class="team-container">
+                <div class="title-container">
+                    <h1 class="main-title">Meet the Team</h1>
                 </div>
-                <div class="intro-card intro-vk">
-                    <div class="image-container">
-                        <Image/
-                            src={VKImg}
-                            alt="Portrait cofounder Vladys"
-                        >
+                <div class="intro-container">
+                    <div class="intro-card intro-em">
+                        <div class="image-container">
+                            <Image/
+                                src={EmImg}
+                                alt="Portrait cofounder Emily"
+                            >
+                        </div>
+                        <div class="description-container intro-em">
+                            <h2>Emily Yang</h2>
+                            <p>
+                                Founder, Strategist & <br> Creative Director
+                            </p>
+                        </div>
                     </div>
-                    <div class="description-container">
-                        <h2>Vladys Kolodnytskyy</h2>
-                        <p>
-                            Front-end Developer & <br> 
-                            Creative Technologist
-                        </p>
+                    <div class="intro-card intro-vk">
+                        <div class="image-container">
+                            <Image/
+                                src={VKImg}
+                                alt="Portrait cofounder Vladys"
+                            >
+                        </div>
+                        <div class="description-container">
+                            <h2>Vladys Kolodnytskyy</h2>
+                            <p>
+                                Front-end Developer & <br> 
+                                Creative Technologist
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -49,7 +51,7 @@ import VKImg from "../assets/images/vk-img.png"
 <style>
 .team-section{
     .team-container{
-        padding: 30px 20px;
+        padding: 100px 20px 30px 20px;
 
         .intro-container{
             margin-top:60px;
@@ -135,7 +137,7 @@ import VKImg from "../assets/images/vk-img.png"
         .team-container{
             display: flex;
             justify-content: space-between;
-            padding: 100px 65px;
+            padding: 80px 65px 0 65px;
             
         }
     }

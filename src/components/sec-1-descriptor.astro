@@ -6,61 +6,62 @@ import SliderImg3 from "../assets/slider-images/slider-5.png";
 import SliderImg4 from "../assets/slider-images/sand.jpg";
 ---
 
-<section class="sec-1-descriptor">
-    <div class="sec-main-desc-cont sec-main-padding">
-        <div class="desc-cont">
-            <h1 class="main-title">
-                Dare to stay true.
-            </h1>
-            <div class="main-text">
-                <p>
-                    A strategic consultancy that feels 
-                </p>
-                <p>
-                    like a paradise. Marsh Market drives
-                </p>
-                <p>
-                    sustainable growth for businesses 
-                </p>
-                <p>
-                    rooted in purpose and soul.   
-                </p>
-            </div>
-            
-            
-            
+<section class="sec-1-descriptor panel">
+    <div class="height-setter sec1-main-padding"> 
+        <div class="sec-main-desc-cont">
+                <div class="desc-cont">
+                    <h1 class="main-title">
+                        Dare to stay true.
+                    </h1>
+                    <div class="main-text">
+                        <p>
+                            A strategic consultancy that feels 
+                        </p>
+                        <p>
+                            like a paradise. Marsh Market drives
+                        </p>
+                        <p>
+                            sustainable growth for businesses 
+                        </p>
+                        <p>
+                            rooted in purpose and soul.   
+                        </p>
+                    </div>
+                    
+                    
+                    
+                </div>
+                <div class="img-container">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <Image/
+                                src={SliderImg1}
+                                alt="model photo artsy blue"
+                            >
+                        </div>
+                        <div class="swiper-slide">
+                            <Image/
+                                src={SliderImg2}
+                                alt="buterfly wings texture"
+                            >
+                        </div>
+                        <div class="swiper-slide">
+                            <Image/
+                                src={SliderImg3}
+                                alt="white flowers artsy photoshoot"
+                            >                                     
+                        </div>
+                        <div class="swiper-slide">
+                            <Image/
+                                src={SliderImg4}
+                                alt="lock of hair on white backgorund artsy picture"
+                            > 
+                        </div>
+                        </div>
+                    </div>
+                </div>
         </div>
-        <div class="img-container">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <Image/
-                        src={SliderImg1}
-                        alt="model photo artsy blue"
-                    >
-                </div>
-                <div class="swiper-slide">
-                    <Image/
-                        src={SliderImg2}
-                        alt="buterfly wings texture"
-                    >
-                </div>
-                <div class="swiper-slide">
-                    <Image/
-                        src={SliderImg3}
-                        alt="white flowers artsy photoshoot"
-                    >                                     
-                </div>
-                <div class="swiper-slide">
-                    <Image/
-                        src={SliderImg4}
-                        alt="lock of hair on white backgorund artsy picture"
-                    > 
-                </div>
-                </div>
-            </div>
-        </div>
-
     </div>
 </section>
 
@@ -69,7 +70,7 @@ import SliderImg4 from "../assets/slider-images/sand.jpg";
     width: 100%;
     .sec-main-desc-cont{
         .desc-cont{
-            padding: 30px 20px 50px 20px;
+            padding: 100px 20px 50px 20px;
             max-width: 750px;
             display:grid;
             gap:20px;
@@ -97,12 +98,11 @@ import SliderImg4 from "../assets/slider-images/sand.jpg";
     }
 }
 
-@media (min-width:768px){
+@media (width > 768px){
     .sec-1-descriptor{
         height: fit-content;
         position: relative;
         .sec-main-desc-cont{
-            padding-top:50px;
             position: relative;
             display:flex;
             gap:0px;
@@ -136,7 +136,7 @@ import SliderImg4 from "../assets/slider-images/sand.jpg";
         }
     }
 }
-@media (min-width:1200px){
+@media (width > 1200px){
     .sec-1-descriptor{
         .sec-main-desc-cont{
             .desc-cont{
@@ -166,4 +166,6 @@ import SliderImg4 from "../assets/slider-images/sand.jpg";
         disableOnInteraction: false
         },
      });
+
+     
 </script>

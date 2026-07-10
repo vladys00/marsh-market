@@ -4,22 +4,24 @@ import CloseMenu from "../assets/svgs/close-menu.svg"
 const currentPath = Astro.url.pathname
 ---
 <nav id="navigation-bar">
-    <div class="nav-main-container page-width">
-        <div class="logo-container">
-            <p class="marsh-logo"><a href="/">Marsh Market</a></p>
+    <div class="nav-wrapper">
+        <div class="nav-main-container page-width">
+            <div class="logo-container">
+                <p class="marsh-logo"><a href="/">Marsh Market</a></p>
+            </div>
+    
+            <button class="hamburguer-button">
+                <HamburguerSVG class="hamburguer-svg"></HamburguerSVG>
+                <CloseMenu class="close-menu-svg"></CloseMenu> 
+            </button>
+    
+            <div class="navigation-container">
+                <a href="/team" class={currentPath.startsWith('/team') ? 'active' : ''}>Team</a>
+                <a href="/contact" class={currentPath.startsWith('/contact') ? 'active' : ''}>Contact</a>
+            </div>
+            
+            <div class="fade-screen"></div>
         </div>
-
-        <button class="hamburguer-button">
-            <HamburguerSVG class="hamburguer-svg"></HamburguerSVG>
-            <CloseMenu class="close-menu-svg"></CloseMenu> 
-        </button>
-
-        <div class="navigation-container">
-            <a href="/team" class={currentPath.startsWith('/team') ? 'active' : ''}>Team</a>
-            <a href="/contact" class={currentPath.startsWith('/contact') ? 'active' : ''}>Contact</a>
-        </div>
-        
-        <div class="fade-screen"></div>
     </div>
 </nav>
 
@@ -29,7 +31,10 @@ color: black;
 }
 nav{
     width: 100%;
-
+    .nav-wrapper{
+        max-width: 1750px;
+        margin-inline: auto;
+    }
     .nav-main-container{
         padding: 20px;
         display: flex;
