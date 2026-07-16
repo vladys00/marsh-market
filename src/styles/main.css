@@ -163,6 +163,13 @@ footer{
 .contact-button:hover{
    cursor:pointer;
    background-color: #FFF762;
+/* background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)),
+        url('src/assets/video/water-effect.gif');
+;
+   background-size: cover;
+   background-position: center;
+   color:white; */
+
 }
 .bold{
    font-weight: 800;
