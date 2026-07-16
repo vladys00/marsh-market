@@ -84,7 +84,7 @@ main{
    margin-inline: auto;
 }
 footer{
-   z-index: 9999;
+   z-index: 999;
    position: relative;
 }
 
