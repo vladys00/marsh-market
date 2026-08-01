@@ -1,4 +1,5 @@
 # Astro Starter Kit: Basics
+some changes to commit
 
 ```sh
 npm create astro@latest -- --template basics
