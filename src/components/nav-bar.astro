@@ -171,8 +171,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const hamburguerSVG = navigationBar?.querySelector(".hamburguer-svg");
   const navContainer = navigationBar?.querySelector(".navigation-container");
   const fadeScreen = navigationBar?.querySelector(".fade-screen");
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+    if (isMobile) {
+        gsap.set(navContainer, { xPercent: 100 });
+    }
   
-  tl.set(navContainer, {xPercent:100});
   
     hamburgerButton?.addEventListener("click", () => {
         if (!menuOpen) {
