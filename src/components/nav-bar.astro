@@ -1,6 +1,4 @@
 ---
-import HamburguerSVG from "../assets/svgs/hamburger.svg"
-import CloseMenu from "../assets/svgs/close-menu.svg"
 const currentPath = Astro.url.pathname
 ---
 <nav id="navigation-bar">
@@ -11,8 +9,11 @@ const currentPath = Astro.url.pathname
             </div>
     
             <button class="hamburguer-button">
-                <HamburguerSVG class="hamburguer-svg"></HamburguerSVG>
-                <CloseMenu class="close-menu-svg"></CloseMenu> 
+                <div class="hamburguer-svg">
+                    <span class="hamburguer-line line-1"></span>
+                    <span class="hamburguer-line line-2"></span>
+                    <span class="hamburguer-line line-3"></span>
+                </div>
             </button>
     
             <div class="navigation-container">
@@ -60,26 +61,24 @@ nav{
             all:unset;
             position: relative;
             width: 23px;
-            height: 33px;
+            height: 20px;
             .hamburguer-svg{
                 position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                opacity: 1;
-                transition: opacity 0.4s ease;
-            }
-            .hamburguer-svg.hidden{
-                opacity:0;
-            }
-            .close-menu-svg{
-                height: 33px;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-            
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .hamburguer-line{
+                    width: 100%;
+                    height: 2px;
+                    background-color: black;
+                    border-radius: 2px;
+                    transform-origin: center;
+                }
+            }           
         }
 
         .navigation-container{
@@ -95,9 +94,8 @@ nav{
             position: absolute;
             top:70px;
             right: 0;
-            opacity: 0;
-            pointer-events: none;
             transition: opacity 0.3s;
+            opacity: 0;
             a{
                 all:unset;
                 font-weight: 500;
@@ -112,10 +110,6 @@ nav{
             }
 
         }
-        .navigation-container.show{
-            opacity: 1;
-            pointer-events: all;
-        }
         .fade-screen{
             top: 70px;
             left: 0;
@@ -126,12 +120,6 @@ nav{
             background-color: rgba(26, 26, 26, 0.404);
             display: flex;
             opacity: 0;
-            display: none;
-            transition: opacity 0.3s;
-        }
-        .fade-screen.show{
-            opacity: 1;
-            display: block;
         }
     }
 }
@@ -166,23 +154,53 @@ nav{
 </style>
 
 <script>
+import { gsap } from "gsap";
+const tl = gsap.timeline()
+
+    
 document.addEventListener("DOMContentLoaded", () => {
+
+  let menuOpen = false;
+  
 
   const navigationBar = document.querySelector("#navigation-bar");
   const hamburgerButton = navigationBar?.querySelector(".hamburguer-button");
+  const hamburguerline1 = navigationBar?.querySelector(".line-1");
+  const hamburguerline2 = navigationBar?.querySelector(".line-2");
+  const hamburguerline3 = navigationBar?.querySelector(".line-3");
   const hamburguerSVG = navigationBar?.querySelector(".hamburguer-svg");
-  const closeMenuSVG = navigationBar?.querySelector(".close-menu-svg");
   const navContainer = navigationBar?.querySelector(".navigation-container");
   const fadeScreen = navigationBar?.querySelector(".fade-screen");
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+    if (isMobile) {
+        gsap.set(navContainer, { xPercent: 100 });
+    }
   
-
-
-  hamburgerButton?.addEventListener("click", () => {
-    navContainer?.classList.toggle("show");
-    fadeScreen?.classList.toggle("show");
-    hamburguerSVG?.classList.toggle("hidden");
-  });
-});
+  
+    hamburgerButton?.addEventListener("click", () => {
+        if (!menuOpen) {
+                menuOpen = true;
+                gsap.to(hamburguerline1, { y: 9, rotate: 45, duration: 0.3 });
+                gsap.to(hamburguerline2, { opacity: 0, duration: 0.2 });
+                gsap.to(hamburguerline3, { y: -9, rotate: -45, duration: 0.3 });
+                tl.to(navContainer, {opacity:1, duration:0.05});
+                tl.to(navContainer, {xPercent:0, opacity:1}, ">");
+                tl.to(fadeScreen, {opacity:1, duration:0.2}, "-=0.4");
+                
+            } else {
+                menuOpen = false;
+                gsap.to(hamburguerline1, { y: 0, rotate: 0, duration: 0.3 });
+                gsap.to(hamburguerline2, { opacity: 1, duration: 0.3, delay: 0.1 });
+                gsap.to(hamburguerline3, { y: 0, rotate: 0, duration: 0.3 });
+                tl.to(navContainer, {xPercent:100});
+                tl.to(fadeScreen, {opacity:0, duration:0.2}, "-=0.3");
+            }
+            /* navContainer?.classList.toggle("show");
+            fadeScreen?.classList.toggle("show");
+            hamburguerSVG?.classList.toggle("hidden"); */
+        });
+    });
 
     
 </script>
