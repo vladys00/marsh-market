@@ -117,6 +117,7 @@ nav{
             height: 100vh;
             z-index: 6;
             position: absolute;
+            pointer-events: none;
             background-color: rgba(26, 26, 26, 0.404);
             display: flex;
             opacity: 0;
@@ -125,6 +126,7 @@ nav{
 }
 
 @media (width > 768px){
+
     nav{
         .nav-main-container{
             padding: 30px 45px;
@@ -196,9 +198,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 tl.to(navContainer, {xPercent:100});
                 tl.to(fadeScreen, {opacity:0, duration:0.2}, "-=0.3");
             }
-            /* navContainer?.classList.toggle("show");
-            fadeScreen?.classList.toggle("show");
-            hamburguerSVG?.classList.toggle("hidden"); */
         });
     });
 

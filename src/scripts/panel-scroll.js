@@ -4,7 +4,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 
-gsap.utils.toArray(".panel").forEach((panel) => {
+const panels = gsap.utils.toArray(".panel");
+
+panels.forEach((panel, i) => {
+  /* const isLast = i === panels.length - 1;
+
+  if (isLast) return; */
+
   ScrollTrigger.create({
     trigger: panel,
     start: "top top",
